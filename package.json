@@ -1,0 +1,19 @@
+{
+  "name": "mvp-0",
+  "version": "1.0.0",
+  "description": "First Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eric-Zayas/MVP-0.git"
+  },
+  "author": "Eric Zayas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eric-Zayas/MVP-0/issues"
+  },
+  "homepage": "https://github.com/Eric-Zayas/MVP-0#readme"
+}
