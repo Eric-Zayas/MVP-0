@@ -13,3 +13,7 @@ CREATE TABLE messages (
   gameID varchar(20),
   PRIMARY KEY (ID)
 );
+
+/*  Execute this file from the command line by typing:
+ *    mysql -u root < server/schema.sql
+ *  to create the database and the tables.*/

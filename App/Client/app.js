@@ -9,18 +9,12 @@ var app = angular.module("Lib",["ngRoute"])
 
   })
 
-  .factory('gameData',function($scope){
-    var arr = [];
-    var addData = function(val){
-      arr.push(val);
-    }
-    return arr;
-  })
+
   .controller('searchCtrl',function($window,$scope,$http){
     $scope.searchInfo = '';
     $scope.displayInfo;
-    // $scope.addData = gameData.addData;
-
+    //  $scope.addData = gameData.addData;
+    $scope.lib = [];
     $scope.qAPI = function(){
       // $scope.displayInfo = 'Ive been wrongfully searched'
       $http({
@@ -34,11 +28,11 @@ var app = angular.module("Lib",["ngRoute"])
 
      }).then(function(response){
         $scope.displayInfo = response;
-        gameData.addData(displayInfo);
+        // gameData.addData(displayInfo);
       })
     }
   })
-.controller('libCtrl','gameData',function($window,$scope,gameData){
-  $scope.libView = [];
-  // $scope.displayInfo = gameData.displayInfo;
-})
+// .controller('libCtrl',,function($window,$scope){
+//   $scope.libView = [];
+//   // $scope.displayInfo = gameData.displayInfo;
+// })

@@ -1,0 +1,17 @@
+.searchMenu{
+  display:inline-block;
+  border: 1px solid black;
+  margin-top: 5%;
+  position:relative;
+  float:left;
+}
+
+.library{
+  display: inline-block;
+  margin-top:5%;
+  border: 1px solid black;
+}
+
+.srchBtn{
+  position:absolute;
+}

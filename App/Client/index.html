@@ -6,25 +6,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-
+  <link type='text/css' rel='stylesheet' href='main.css' />
 </head>
 
 <body ng-app='Lib'>
-  <div ng-controller='searchCtrl'>
-    <form>
-      <input type="text" ng-model="searchInfo">
-    </form>
-    <button ng-click='qAPI()'>Search</button>
-      <div ng-repeat='info in displayInfo.data track by $index' ng-click='addData(info)'>
+  <div ng-controller='searchCtrl' >
+    <div>
+      <form>
+        <input type="text" ng-model="searchInfo">
+      </form>
+      <button ng-click='qAPI()' class='srchBtn'>Search</button>
+    </div>
+
+    <!-- {{lib}} -->
+    <div class='searchMenu'>
+      <h2>Search Results Games</h2>
+      <div ng-repeat='info in displayInfo.data track by $index' ng-click='lib.push(info)'>
         {{$index + 1}}.  {{info}}
       </div>
-  </div>
 
-  <div ng-controller='libCtrl'>
-    <div ng-repeat='entry in displayInfo.data'>
-      {{entry}}
+    </div>
+
+    <div class='library'>
+      <h2>Game Library</h2>
+      <ol>
+        <li ng-repeat='entry in lib'>{{entry}}</li>
+      </ol>
     </div>
   </div>
+
+
 
 
   <script src='app.js'></script>
