@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>No Game No Library</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+</head>
+
+<body ng-app='Lib'>
+  <div ng-controller='searchCtrl'>
+    <form>
+      <input type="text" ng-model="searchInfo">
+    </form>
+    <button ng-click='qAPI()'>Search</button>
+
+    {{displayInfo}}
+  </div>
+  <script src='app.js'></script>
+</body>
+
+
+</html>

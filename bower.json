@@ -1,0 +1,17 @@
+{
+  "name": "mvp-0",
+  "description": "First Project",
+  "main": "app.js",
+  "authors": [
+    "Eric Zayas"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Eric-Zayas/MVP-0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
