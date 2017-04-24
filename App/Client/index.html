@@ -15,9 +15,18 @@
       <input type="text" ng-model="searchInfo">
     </form>
     <button ng-click='qAPI()'>Search</button>
-
-    {{displayInfo}}
+      <div ng-repeat='info in displayInfo.data track by $index' ng-click='addData(info)'>
+        {{$index + 1}}.  {{info}}
+      </div>
   </div>
+
+  <div ng-controller='libCtrl'>
+    <div ng-repeat='entry in displayInfo.data'>
+      {{entry}}
+    </div>
+  </div>
+
+
   <script src='app.js'></script>
 </body>
 

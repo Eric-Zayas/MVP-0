@@ -8,9 +8,19 @@ var app = angular.module("Lib",["ngRoute"])
     })
 
   })
-  .controller('searchCtrl',function($scope,$http){
+
+  .factory('gameData',function($scope){
+    var arr = [];
+    var addData = function(val){
+      arr.push(val);
+    }
+    return arr;
+  })
+  .controller('searchCtrl',function($window,$scope,$http){
     $scope.searchInfo = '';
-    $scope.displayInfo = '';
+    $scope.displayInfo;
+    // $scope.addData = gameData.addData;
+
     $scope.qAPI = function(){
       // $scope.displayInfo = 'Ive been wrongfully searched'
       $http({
@@ -23,7 +33,12 @@ var app = angular.module("Lib",["ngRoute"])
         "url": "https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name&limit=10&offset=0&order=release_dates.date%3Adesc&search=" + $scope.searchInfo,
 
      }).then(function(response){
-        $scope.displayInfo = response
+        $scope.displayInfo = response;
+        gameData.addData(displayInfo);
       })
     }
   })
+.controller('libCtrl','gameData',function($window,$scope,gameData){
+  $scope.libView = [];
+  // $scope.displayInfo = gameData.displayInfo;
+})
