@@ -6,12 +6,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link type='text/css' rel='stylesheet' href='main.css' />
 </head>
 
 <body ng-app='Lib'>
+
   <div ng-controller='searchCtrl' >
     <div>
+      <h1>No Game No Library</h1>
       <form>
         <input type="text" ng-model="searchInfo">
       </form>
@@ -21,8 +24,11 @@
     <!-- {{lib}} -->
     <div class='searchMenu'>
       <h2>Search Results Games</h2>
-      <div ng-repeat='info in displayInfo.data track by $index' ng-click='lib.push(info)'>
-        {{$index + 1}}.  {{info}}
+      <div ng-repeat='info in displayInfo.data track by $index' ng-click='lib.push(info)' class='dispInfo'>
+        <h2>{{info.name}}</h2><br>
+          <img src={{info.cover.url}} /> <br>
+        Synopsis :{{info.esrb.synopsis}}
+
       </div>
 
     </div>
@@ -30,7 +36,7 @@
     <div class='library'>
       <h2>Game Library</h2>
       <ol>
-        <li ng-repeat='entry in lib'>{{entry}}</li>
+        <li ng-repeat='entry in lib'>{{entry.name}}</li>
       </ol>
     </div>
   </div>

@@ -1,17 +1,46 @@
+
+*{
+  font-family: 'Raleway', sans-serif;
+}
 .searchMenu{
   display:inline-block;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin-top: 5%;
   position:relative;
   float:left;
 }
-
+h1{
+  display:inline-block;
+  color:white;
+  background-color: #ff0000;
+  padding:10px;
+}
 .library{
   display: inline-block;
   margin-top:5%;
-  border: 1px solid black;
+  margin-right:20%;
+  float:right;
+  border-left: 1px solid black;
 }
 
 .srchBtn{
-  position:absolute;
+display:inline-block;
+}
+form{
+  display: inline-block;
+}
+input[type=text]{
+  height:40px;
+  font-size: 25px;
+}
+.dispInfo{
+
+  background-color: #F4F4F9;
+  max-height:500px;
+  max-width:500px;
+  border-bottom: 1px solid #B3B6B7;
+}
+
+h2{
+ border-bottom: 1px solid black;
 }
