@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Eric-Zayas/MVP-0#readme",
   "dependencies": {
+    "angoose": "^0.3.21",
     "angular": "^1.6.4",
     "express": "^4.15.2",
     "igdb-api-node": "^2.0.2",
