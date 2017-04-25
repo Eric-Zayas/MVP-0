@@ -10,6 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link type='text/css' rel='stylesheet' href='main.css' />
+  <!-- <script src="/angoose/angoose-client.js"></script> -->
 </head>
 
 <body ng-app='Lib'>
@@ -17,15 +18,15 @@
   <div ng-controller='searchCtrl' class='row'>
     <div class='col-md-12 srch'>
       <h1>No Game No Library</h1>
-      <form>
+      <form ng-submit='qAPI()'>
         <input type="text" ng-model="searchInfo">
+        <input type='submit'  class='srchBtn'></input>
       </form>
-      <button ng-click='qAPI()' class='srchBtn'>Search</button>
     </div>
 
     <div class='searchMenu col-md-6'>
       <h2>Search Results Games</h2>
-      <div ng-repeat='info in displayInfo.data track by $index' ng-click='lib.push(info) ' class='dispInfo'>
+      <div ng-repeat='info in displayInfo.data track by $index' ng-click='lib.push(info)' class='dispInfo'>
       <img src={{info.cover.url}} class='img'/>  <h2 class='title'>{{info.name}}</h2><br>
           <br>
         Synopsis :{{info.esrb.synopsis}}
@@ -37,7 +38,7 @@
     <div class='library col-md-6'>
       <h2>Game Library</h2>
       <ol>
-        <li ng-repeat='entry in lib' class='liEntry'>
+        <li ng-repeat='entry in lib track by $index' class='liEntry' ngClick='lib.splice(0,1)'>
           <img src={{entry.cover.url}} class='img'/>
           </li>
       </ol>
@@ -45,8 +46,11 @@
   </div>
 
 
+<!-- {{entry.name}} -->
 
 
   <script src='app.js'></script>
 </body>
+
+
 </html>

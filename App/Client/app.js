@@ -1,3 +1,4 @@
+
 var app = angular.module("Lib",["ngRoute"])
   .config(function($routeProvider){
     $routeProvider
@@ -6,23 +7,21 @@ var app = angular.module("Lib",["ngRoute"])
     })
   })
 
-  .controller('searchCtrl',function($window,$scope,$http){
+  .controller('searchCtrl',function($scope,$http){
     $scope.searchInfo = '';
     $scope.displayInfo;
     $scope.lib = [];
     $scope.qAPI = function(){
-
       $http({
-        'method': 'GET',
-        'headers':{
-          "X-Mashape-Key" : "uw6gmmY9rVmshLmB0OdTga3iqkfSp1vf3WUjsnA7vIRNU0gVpc",
-          'Accept': 'application/json',
-          "X-Login-Ajax-call": 'true'
-        },
-        "url": "https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name,esrb.synopsis,cover&limit=10&offset=0&order=release_dates.date%3Adesc&search=" + $scope.searchInfo,
-
+        method: 'POST',
+         url: '/file',
+         data: {
+           'key': $scope.searchInfo
+         }
      }).then(function(response){
-        $scope.displayInfo = response;
-      })
+       console.log(response.data);
+       $scope.displayInfo = response;
+        return response.data.key
+     })
     }
   })

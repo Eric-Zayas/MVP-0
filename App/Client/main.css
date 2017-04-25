@@ -1,10 +1,8 @@
 
-*{
-  font-family: 'Raleway', sans-serif;
-}
+*{font-family: 'Raleway', sans-serif;}
 .searchMenu{
   display:inline-block;
-  /*border: 1px solid black;*/
+
   float:left;
   width: 50%;}
   /*margin-top: 5%;

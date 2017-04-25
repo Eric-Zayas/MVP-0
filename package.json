@@ -19,10 +19,13 @@
   "dependencies": {
     "angoose": "^0.3.21",
     "angular": "^1.6.4",
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "igdb-api-node": "^2.0.2",
     "mongoose": "^4.9.6",
     "mysql": "^2.13.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
   }
 }
