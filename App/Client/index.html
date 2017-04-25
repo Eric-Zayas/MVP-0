@@ -39,7 +39,7 @@
       <h2>Game Library</h2>
       <ol>
         <li ng-repeat='entry in lib track by $index' class='liEntry' ngClick='lib.splice(0,1)'>
-          <img src={{entry.cover.url}} class='img'/>
+          <a href='https://www.google.com/#q={{entry.name}}&tbm=shop'><img src={{entry.cover.url}} class='img'/></a>
           </li>
       </ol>
     </div>

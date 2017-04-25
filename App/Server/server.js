@@ -36,20 +36,9 @@ app.post('/file',function(req,res){
 
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
-
-  // query db to get everything
-  // send that
-
-
-
-res.send(body);
-
-
+  res.send(body);
   console.log(body);
 });
-
-
-
 });
 
 app.use(express.static(__dirname + '/../Client'));
