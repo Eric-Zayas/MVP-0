@@ -20,6 +20,8 @@
     "angular": "^1.6.4",
     "express": "^4.15.2",
     "igdb-api-node": "^2.0.2",
+    "mongoose": "^4.9.6",
+    "mysql": "^2.13.0",
     "nodemon": "^1.11.0"
   }
 }

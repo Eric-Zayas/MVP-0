@@ -1,16 +1,15 @@
-var db = require('mySQL')
-var dbkx = require('knex');
+var db = require('mysql');
+
 
 CREATE DATABASE chat;
 
 USE chat;
 
 CREATE TABLE messages (
-  /* Describe your table here.*/
-
   id int NOT NULL AUTO_INCREMENT,
   gameTitle varchar(200) NOT NULL,
-  gameID varchar(20),
+  cover varchar(500) NOT NULL,
+  synopsis varchar(1000),
   PRIMARY KEY (ID)
 );
 

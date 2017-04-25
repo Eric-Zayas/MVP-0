@@ -1,19 +1,14 @@
-// var igdb = require('igdb-api-node');
-
 var app = angular.module("Lib",["ngRoute"])
   .config(function($routeProvider){
     $routeProvider
       .when("/", {
         templateUrl : "App/index.html"
     })
-
   })
-
 
   .controller('searchCtrl',function($window,$scope,$http){
     $scope.searchInfo = '';
     $scope.displayInfo;
-
     $scope.lib = [];
     $scope.qAPI = function(){
 
